@@ -1,7 +1,9 @@
 https://jsonpath.com/
 
 ## 1. First element in array:
+```ruby
  $.store.book[0]
+```
 
 ## 2. Array elements from start index up-to index 2 (inclusive):
  $.store.book[0:3]
