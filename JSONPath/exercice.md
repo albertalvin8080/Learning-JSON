@@ -30,7 +30,7 @@ $.store.book[-2:]
 $.store.book[0,1,3]
 ```
 
-## 6. Select elements of an array where price <= 9.00:
+## 6. Select the elements of an array where price <= 9.00:
 
 ```ruby
 $.store.book[?(@.price <= 9.00)]
@@ -60,14 +60,26 @@ $.store..price
 $.store.*
 ```
 
-## 11. Select the books alternating by n(2):
+## 11. Select all books alternating by n(2):
 
 ```ruby
 $.store.book[::2]
 ```
 
-## 12. Select the books alternating by n(2) starting from the second book:
+## 12. Select all books alternating by n(2) starting from the second book:
 
 ```ruby
 $.store.book[-1::2]
+```
+
+## 13. Select all books which have a price higher than 9 or in which the author is Nigel Rees:
+
+```ruby
+$.store.book[?(@.price > 9 || @.author == 'Nigel Rees')]
+```
+
+## 14. Select all books which have a price higher than 11 and in which the title is "Sword of Honour":
+
+```ruby
+$.store.book[?(@.price > 11 && @.title== 'Sword of Honour')]
 ```
